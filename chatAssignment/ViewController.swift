@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     @IBOutlet var collectionView: UICollectionView!
@@ -14,6 +15,12 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var model = [Model]()
+        Services.ds.REF_USERS.observeEventType(.Value, withBlock: {
+            snapshot in
+            //print("\(snapshot.key) -> \(snapshot.value)")
+            print(snapshot.value)
+        })
        
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
