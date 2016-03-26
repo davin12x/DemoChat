@@ -9,10 +9,19 @@
 import UIKit
 
 class DisplayCell: UICollectionViewCell {
-    @IBOutlet weak var productImage:UIImage?
+    @IBOutlet weak var productImage:UIImageView?
     @IBOutlet weak var productName:UILabel?
+    override func awakeFromNib() {
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.blackColor().CGColor
+        productImage?.clipsToBounds = true
+    }
     
-    func UpdateCell(){
+    func UpdateCell(model:Model){
+        productName?.text = model._productName
+        print(model._productName)
     }
     
 }
