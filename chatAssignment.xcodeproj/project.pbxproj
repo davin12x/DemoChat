@@ -12,6 +12,10 @@
 		0AA78CCA1CA6CBA700644D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA78CC81CA6CBA700644D5C /* Main.storyboard */; };
 		0AA78CCC1CA6CBA700644D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA78CCB1CA6CBA700644D5C /* Assets.xcassets */; };
 		0AA78CCF1CA6CBA700644D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA78CCD1CA6CBA700644D5C /* LaunchScreen.storyboard */; };
+		0AA78CDB1CA6DB3500644D5C /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA78CDA1CA6DB3500644D5C /* Boundaries.swift */; };
+		0AA78CDD1CA6E05A00644D5C /* DisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA78CDC1CA6E05A00644D5C /* DisplayCell.swift */; };
+		0AA78CDF1CA6E0B500644D5C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA78CDE1CA6E0B500644D5C /* Model.swift */; };
+		0AA78CE11CA6E27200644D5C /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA78CE01CA6E27200644D5C /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		0AA78CCB1CA6CBA700644D5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AA78CCE1CA6CBA700644D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AA78CD01CA6CBA700644D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA78CDA1CA6DB3500644D5C /* Boundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boundaries.swift; sourceTree = "<group>"; };
+		0AA78CDC1CA6E05A00644D5C /* DisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCell.swift; sourceTree = "<group>"; };
+		0AA78CDE1CA6E0B500644D5C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0AA78CE01CA6E27200644D5C /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		0AA78CC31CA6CBA700644D5C /* chatAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				0AA78CD91CA6CBE300644D5C /* Controller */,
+				0AA78CD81CA6CBDA00644D5C /* Model */,
+				0AA78CD71CA6CBD400644D5C /* View */,
+				0AA78CD61CA6CBB500644D5C /* DataServices */,
 				0AA78CC41CA6CBA700644D5C /* AppDelegate.swift */,
-				0AA78CC61CA6CBA700644D5C /* ViewController.swift */,
 				0AA78CC81CA6CBA700644D5C /* Main.storyboard */,
 				0AA78CCB1CA6CBA700644D5C /* Assets.xcassets */,
 				0AA78CCD1CA6CBA700644D5C /* LaunchScreen.storyboard */,
 				0AA78CD01CA6CBA700644D5C /* Info.plist */,
 			);
 			path = chatAssignment;
+			sourceTree = "<group>";
+		};
+		0AA78CD61CA6CBB500644D5C /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				0AA78CE01CA6E27200644D5C /* Services.swift */,
+			);
+			name = DataServices;
+			sourceTree = "<group>";
+		};
+		0AA78CD71CA6CBD400644D5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AA78CDA1CA6DB3500644D5C /* Boundaries.swift */,
+				0AA78CDC1CA6E05A00644D5C /* DisplayCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0AA78CD81CA6CBDA00644D5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AA78CDE1CA6E0B500644D5C /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0AA78CD91CA6CBE300644D5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AA78CC61CA6CBA700644D5C /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA78CDF1CA6E0B500644D5C /* Model.swift in Sources */,
+				0AA78CE11CA6E27200644D5C /* Services.swift in Sources */,
 				0AA78CC71CA6CBA700644D5C /* ViewController.swift in Sources */,
+				0AA78CDB1CA6DB3500644D5C /* Boundaries.swift in Sources */,
+				0AA78CDD1CA6E05A00644D5C /* DisplayCell.swift in Sources */,
 				0AA78CC51CA6CBA700644D5C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
