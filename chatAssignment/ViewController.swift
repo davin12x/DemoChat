@@ -13,10 +13,14 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     @IBOutlet var collectionView: UICollectionView!
     var model = [Model]()
 
+    @IBOutlet var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        searchBar.opaque = false
+        self.searchBar.layer.borderColor = UIColor.init(red: 76/255, green: 211.0/255, blue: 133.0/255, alpha: 1).CGColor
+        self.searchBar.layer.borderWidth = 1
         Services.ds.REF_USERS.observeEventType(.Value, withBlock: {
             snapshot in
             //print("\(snapshot.key) -> \(snapshot.value)")

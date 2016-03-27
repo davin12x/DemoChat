@@ -12,13 +12,14 @@ class Model {
     var imagePath:String?
     var _productName:String?
     
-   private var productName:String{
-        return _productName!
-    }
+  
     init(data:Dictionary<String,String>){
         if let productName = data["productName"] {
             self._productName = productName
             
+        }
+        if let imageUrl = data["imageUrl"]{
+            self.imagePath = imageUrl
         }
     }
 }
